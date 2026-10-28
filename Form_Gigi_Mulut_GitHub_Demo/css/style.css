@@ -1,0 +1,329 @@
+
+.btn.btn-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+  .border-end-md {
+    border-right: 1px solid #dee2e6; /* Warna garis Bootstrap */
+  }
+
+  @media (max-width: 768px) {
+    .border-end-md {
+      border-right: none; /* Hilangkan garis di layar kecil */
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  body
+    {
+        font-family: georgia, serif;
+         /* background-color: #f8f9fa;  */
+        /* background-color: #f8f9fa;  */
+
+    }
+
+    /* .simpan{
+        font-weight: 500; 
+        font-size: medium;
+         background-color: #007EA7;
+    } */
+
+    body {
+  overflow-x: hidden;
+}
+
+placeholder {
+  color:rgb(250, 252, 253);
+  opacity: 0.5;
+}
+#obatTable {
+      min-width: 1000px;
+      font-size: 0.85rem;
+    }
+
+    .form-control-sm {
+      font-size: 0.75rem;
+      padding: 0.3rem;
+    }
+
+    .btn-sm {
+      font-size: 0.75rem;
+    }
+
+    .tambah-btn {
+      background-color: #f4e3b2;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      color: black;
+    }
+
+    
+      .table-responsive {
+        overflow-x: auto;
+}
+
+/* input[type="radio"] {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s ease;
+  }
+
+  input[type="radio"]:checked {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  } */
+    
+
+  /* style untuk radio button */
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #007bff;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+
+  input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 4px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 50%;
+  }
+
+  input[type="radio"]:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .buttonIMT{
+    background-color: #f4e3b2;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* style untuk checkbox */
+
+input[type="checkbox"] {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 0.2 rem rgba(0, 126, 167, 0.4);
+  background-color: #007EA7;
+  border-color: #007EA7;
+}
+
+
+  /* .tambahbaris{
+    background-color: #f4e3b2;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+   */
+
+   .skrinning {
+    font-weight: 540;
+    font-size: 1rem;
+    color: #333;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+   }
+
+
+/* Gigi */
+    .tooth {
+      width: 40px;
+      height: 40px;
+      margin: 2px;
+      border: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      border-radius: 10%;
+      box-shadow: #000000 0px 2px 5px;
+    }
+
+    .tooth.selected {
+      background-color: #ff0000;
+      transform: scale(1.1);
+    }
+
+    .description-box {
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .arrow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: -8px;
+      margin-top: -8px;
+    }
+
+    .arrow-span {
+      width: 320px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    .hapusform{
+      margin-top:30px;
+    }
+
+    /* Baian Ttd */
+
+    .signature-box {
+      height: 80px;
+      resize: none;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    .section-title {
+      font-weight: 600;
+    }
+    .text-center-label {
+      text-align: center;
+      font-weight: 500;
+    }
+  
+    /* Responsif untuk Judul */
+
+    .judul-gigi {
+  font-weight: 800;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.judul-gigi p {
+  text-shadow: 1px 1px 3px #656666;
+  color: #C26A42;
+  font-size: 2rem;
+  margin: 0.3em 0;
+  word-wrap: break-word;
+}
+
+/* Responsive style */
+@media (max-width: 768px) {
+  .judul-gigi p {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .judul-gigi p {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Responsif untuk Peringatan */
+
+.peringatan-box {
+  font-weight: 800;
+  text-align: left;
+  margin: 20px 8% 10px 8%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Responsive: tablet */
+@media (max-width: 768px) {
+  .peringatan-box {
+    margin: 20px 5% 10px 5%;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive: mobile */
+@media (max-width: 480px) {
+  .peringatan-box {
+    margin: 15px 4% 10px 4%;
+    font-size: 0.95rem;
+  }
+}
+
+/* DIvider */
+
+.breadcrumb {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.breadcrumb-item {
+  text-transform: capitalize;
+}
+
+.breadcrumb-item.active {
+  font-weight: bold;
+  color: #000000; 
+}
+
+.breadcrumb-item a {
+  color: #007EA7 !important;                  
+  text-decoration-color: #007EA7 !important; 
+}
+
+.breadcrumb-item a:hover {
+  color: #007EA7 !important;
+  text-decoration-color: #e0e0e0 !important;
+}
+
+.breadcrumb-item.active a {
+  color: #000000 !important;               
+  pointer-events: none;                     
+  text-decoration: none !important;        
+  cursor: default;
+}
+
+  .is-invalid {
+    border: 2px solid red !important;
+  }
+
+input:disabled, select:disabled, textarea:disabled {
+  background-color: #e9ecef !important;
+  cursor: not-allowed;
+}
+
+#obatTable tbody td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}

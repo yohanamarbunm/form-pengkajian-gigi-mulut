@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSUD TARUTUNG</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/style.js"></script>
+    <script src="js/form-autosave.js"></script>
+    <link rel="icon" href="Picture/icon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<body style="padding-top: 80px; background-color: #e9e9e9;">
+
+  <div id="breadcrumb-container"></div>
+
+    <!-- Navbar Atas -->
+    <nav  style="background-color: #007EA7;" class="navbar navbar-expand-lg bg-body- fixed-top">
+        <div  class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="container1">
+                <a class="navbar-brand1" href="#">
+                  <img class="rounded-circle" src="Picture/Logo-RSUD-Tarutung.png" alt="Logo" width="70" height="55">
+                </a>
+              </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <h5 style=" font-weight: 700; text-shadow: 1px 1px 2px ; color: white;">RSUD TARUTUNG KAB. TAPANULI UTARA</h5>
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search"/>
+                <button  type="button" class="btn btn-light"><a style="font-weight: 700;">Cari</a></button>
+              </form>
+
+          </div>
+        </div>
+      </nav>
+
+<form id="formPasien" class="needs-validation" novalidate data-page="perilaku.html">
+<!-- Perilaku /Koping -->
+    <div class="container">
+  <h5 class="fw-bold mt-5" style="color: #003459;">6. Perilaku/Koping</h5>
+</div>
+<div class="container bg-light p-4 rounded shadow mt-4" style="font-weight: 500; ">
+
+<!-- Status Psikologis -->
+  <div class="row mt-3 align-items-center ms-2">
+    <div class="col-3">
+      <label for="statuspsikologi" class="form-label fw-bold">Status Psikologis</label>
+    </div>
+  </div>
+
+  <div class="row ms-1">
+    <!-- Kolom 1 -->
+    <div class="col-sm-2 ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori1" id="tdkterganggu">
+        <label class="form-check-label" for="tdkterganggu">Tidak terganggu</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori2" id="cemass">
+        <label class="form-check-label" for="cemass">Cemas/Gelisah</label>
+      </div>
+    </div>
+
+    <!-- Kolom 2 -->
+    <div class="col-sm-2 ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori3" id="checktakut">
+        <label class="form-check-label" for="checkpelupa">Takut</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori4" id="checkmarah">
+        <label class="form-check-label" for="checkmarah">Marah</label>
+      </div>
+    </div>
+
+    <!-- Kolom 3 -->
+    <div class="col-sm-2 ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori5" id="checkpanik">
+        <label class="form-check-label" for="checkpanik">Panik</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori6" id="checktegang">
+        <label class="form-check-label" for="checktegang">Tegang</label>
+      </div>
+    </div>
+
+
+  <!-- Kolom 4 -->
+  <div class="col-sm-2">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori7" id="checkfokusdiri">
+        <label class="form-check-label" for="checkfokusdiri">Berfokus pada diri sendiri</label>
+      </div>
+  </div>
+  </div> <!-- penutup row -->
+
+
+<!-- Status Mental -->
+<div class="row mt-3 align-items-center ms-2">
+  <div class="col-sm-2">
+    <label for="statusmental" class="form-label fw-bold">Status Mental</label>
+  </div>
+</div>
+
+<div class="row ms-1">
+    <!-- Kolom 1 -->
+    <div class="col-sm-3 ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori1" id="sadardanorien">
+        <label class="form-check-label" for="sadardanorien">Sadar dan Orientasi Baik</label>
+      </div>
+
+    </div>
+
+    <!-- Kolom 2 -->
+    <div class="col-sm-3 ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori3" id="berpikirterganggu">
+        <label class="form-check-label" for="berpikirterganggu">Proses Berpikir Terganggu</label>
+      </div>
+    </div>
+
+    <!-- Kolom 3 -->
+    <div class="col-sm-3 ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="checkori5" id="perilakukekerasan">
+        <label class="form-check-label" for="perilakukekerasan">Perilaku Kekerasan/Resiko</label>
+      </div>
+    </div>
+
+  </div> <!-- penutup row -->
+
+
+  <!-- Mencederai Diri -->
+<div class="row mt-3 align-items-center ms-2">
+  <div class="col-sm-4">
+    <label for="resikomencederaidirisendiri" class="form-label fw-bold">Resiko Mencederai Diri Sendiri</label>
+  </div>
+</div>
+
+<div class="container mx-2">
+  <div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="resiko" id="yaciderai">
+  <label class="form-check-label" for="yaciderai">
+    Ya
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="resiko" id="tidakciderai" checked>
+  <label class="form-check-label" for="tidakciderai">
+    Tidak
+  </label>
+</div>
+</div>
+
+<!-- Status Sosial -->
+
+<div class="StatusSosial" style="margin-left: -5px;" >
+<div class="row mt-3 align-items-center ms-3">
+  <div class="col-sm-4">
+    <label for="StatusSosial" class="form-label fw-bold">Status Sosial</label>
+  </div>
+</div>
+
+<div class="container mx-4">
+<span class=" mt-5"> 1.  Masalah Perkawinan </span>
+
+  <div class="form-check mt-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="tidakadamaslah" checked>
+  <label class="form-check-label" for="tidakadamaslah">
+    Tidak Ada
+  </label>
+</div>
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="adamasalah" >
+  <label class="form-check-label" for="adamasalah">
+    Ada
+  </label>
+</div>
+</div>
+
+<div class="container mx-4">
+<span > 2. Hubungan Pasien dengan Anggota Keluarga/Lingkungan Sekitar </span>
+
+  <div class="form-check mt-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="hubpasien">
+  <label class="form-check-label" for="hubpasien">
+    Baik
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="tidakbaikhubpasien" >
+  <label class="form-check-label" for="tidakbaikhubpasien">
+    Tidak Baik
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="menarikhubpasien" >
+  <label class="form-check-label" for="menarikhubpasien">
+    Menarik Diri
+  </label>
+</div>
+</div>
+</div>
+
+<!-- Spritual -->
+<div class="row mt-3 align-items-center ms-2">
+  <div class="col-sm-4">
+    <label for="spiritual" class="form-label fw-bold">Spritual</label>
+  </div>
+</div>
+<div class="container mx-3">
+<span > Kegiatan Beribadah </span>
+
+  <div class="form-check mt-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="hubpasien">
+  <label class="form-check-label" for="hubpasien">
+    Selalu
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="tidakbaikhubpasien" >
+  <label class="form-check-label" for="tidakbaikhubpasien">
+    Kadang
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="menarikhubpasien" >
+  <label class="form-check-label" for="menarikhubpasien">
+    Tidak Pernahh
+  </label>
+</div>
+</div>
+
+<!-- Status Ekonomi -->
+
+
+<div class="row mt-3 align-items-center ms-2">
+  <div class="col-sm-4">
+    <label for="statusekonomi" class="form-label fw-bold">Status Ekonomi</label>
+  </div>
+</div>
+
+<div class="mx-4">
+  <div class="form-check mt-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="ekonomibaik">
+  <label class="form-check-label" for="ekonomibaik">
+    Baik
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="ekonomicukup" >
+  <label class="form-check-label" for="ekonomicukup">
+    Cukup
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="ekonomikurang" >
+  <label class="form-check-label" for="ekonomikurang">
+    Kurang
+  </label>
+</div>
+
+<div class="form-check mb-2">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="ekonomisulitdinilai" >
+  <label class="form-check-label" for="ekonomisulitdinilai">
+    Sulit Dinilai
+  </label>
+</div>
+</div>
+
+ <div class="row mt-3 align-items-center ms-2">
+  <div class="col-sm-4">
+    <label for="lainstatusekonomi" class="form-label fw-bold">Lain-lain</label>
+  </div>
+</div>
+      <div class="form-check form-check-inline">
+  <input type="text" class="form-control" style="width: 300px;" id="lainstatusekonomi" placeholder="Sebutkan Kondisi Lainnya">
+    </div>
+
+</div>  <!-- Penutup Container -->
+
+<!-- tombol  -->
+  <div class="container mt-4">
+  <div class="row gy-2">
+    <div class="col-12 col-md-6 text-md-start text-center">
+      <button type="button" class="btn btn-secondary fw-bold" onclick="kembali()">← Sebelumnya</button>
+    </div>
+    <div class="col-12 col-md-6 text-md-end text-center">
+    <!-- <button style="color: white;" type="button" class="btn btn-warning me-2 fw-bold" onclick="resetForm()">Reset</button>
+    <button type="button" class="btn btn-success me-2 fw-bold" onclick="updateForm()">Update</button> -->
+    <button  style="background-color: #007EA7; color: white;" type="submit" class="btn  fw-bold">Simpan & Lanjut</button>
+    </div>
+  </div>
+</div>
+
+</form>
+<div class="p-4  mt-4 mb-1"></div>
+
+<!-- me-load toast -->
+<div id="toast-container"></div>
+
+<script>
+  fetch("komponen/toast.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("toast-container").innerHTML = html;
+
+      const script = document.createElement("script");
+      script.src = "js/form-autosave.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Gagal memuat komponen toast:", err));
+
+
+  fetch("komponen/divider.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("breadcrumb-container").innerHTML = html;
+
+      const current = window.location.pathname.split("/").pop().toLowerCase();
+      const items = document.querySelectorAll(".breadcrumb-item");
+
+      items.forEach(item => {
+        const page = item.getAttribute("data-halaman")?.toLowerCase();
+        if (page === current) {
+          item.classList.add("active");
+          item.setAttribute("aria-current", "page");
+          const link = item.querySelector("a");
+          if (link) {
+            link.removeAttribute("href");
+          }
+        }
+      });
+    })
+    .catch(err => console.error("Gagal memuat breadcrumb:", err));
+
+
+</script>
+
+      </body>
+    </html>

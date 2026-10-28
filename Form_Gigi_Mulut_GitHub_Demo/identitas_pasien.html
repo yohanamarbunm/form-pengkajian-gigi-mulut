@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/demo-api.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSUD TARUTUNG</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/form-autosave.js"></script>
+    <script src="js/style.js"></script>
+    <link rel="icon" href="Picture/icon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<body style="padding-top: 80px; background-color: #e9e9e9;">
+<div id="breadcrumb-container"></div>
+    <!-- Navbar Atas -->
+    <nav  style="background-color: #007EA7;" class="navbar navbar-expand-lg bg-body- fixed-top">
+        <div  class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="container1">
+                <a class="navbar-brand1" href="#">
+                  <img class="rounded-circle" src="Picture/Logo-RSUD-Tarutung.png" alt="Logo" width="70" height="55">
+                </a>
+              </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <h5 style=" font-weight: 700; text-shadow: 1px 1px 2px ; color: white;">RSUD TARUTUNG KAB. TAPANULI UTARA</h5>
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search"/>
+                <button  type="button" class="btn btn-light"><a style="font-weight: 700;">Cari</a></button>
+              </form>
+
+          </div>
+        </div>
+      </nav>
+
+  
+
+     <!-- Pembuka Bagian Kedua -->
+ <form id="formPasien" class="needs-validation" novalidate data-page="identitas_pasien.html">
+
+    <!-- Identitas -->
+
+      <div class="container mt-5">
+        <h5 class="fw-bold " style="color:#007EA7 ;">IDENTITAS PASIEN</h5>
+     </div>
+
+      <div class="container mb-4" style="font-weight:500;">
+      <!-- Data Awal -->
+      <div class="bg-light p-4 rounded border-end-md">
+
+        <!-- Nama -->
+        <div class="mb-4">
+          <label for="nama" class="form-label">Nama</label>
+          <input type="text" name="nama" class="form-control" id="nama" placeholder="Isi nama">
+        </div>
+
+        <!-- Jenis Kelamin -->
+        <div class="mb-4">
+          <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+          <select id="jenis_kelamin" name="jenis_kelamin" class="form-select">
+            <option selected disabled hidden value="">Pilih jenis kelamin</option>
+            <option value="lk">Laki-laki</option>
+            <option value="pr">Perempuan</option>
+          </select>
+        </div>
+
+
+        <!-- Tanggal Lahir -->
+        <div class="mb-3">
+          <label for="ttl1" class="form-label">Tanggal Lahir</label>
+          <input type="date" name="tgl_lahir" class="form-control" id="ttl1">
+        </div>
+
+        <!-- Nomor MR -->
+        <div class="mb-3">
+          <label for="MR1" class="form-label">No. MR</label>
+          <input type="text" name="noMR" class="form-control" id="MR1" placeholder="Isi nomor MR">
+        </div>
+      
+
+    <!-- Agama -->
+<div class="mb-3">
+  <label for="agama" class=" col-form-label">Agama</label>
+    <select class="form-select" name="agama" id="agama" aria-label="Pilih agama" required>
+      <option value="" selected disabled hidden>Pilih Agama</option>
+      <option value="islam">Islam</option>
+      <option value="kristen">Kristen</option>
+      <option value="katolik">Katolik</option>
+      <option value="hindu">Hindu</option>
+      <option value="budha">Budha</option>
+      <option value="konghucu">Konghucu</option>
+      <option value="agama_lain">Lain-lain</option>
+    </select>
+</div>
+
+<!-- Pendidikan -->
+<div class=" mb-3 align-items-center">
+  <label for="pendidikan" class=" col-form-label">Pendidikan</label>
+  <div class="">
+    <select class="form-select" name="pendidikan" id="pendidikan" required>
+      <option value="" selected disabled hidden>Pilih Pendidikan</option>
+      <option value="sd">SD</option>
+      <option value="smp">SMP</option>
+      <option value="sma">SMA</option>
+      <option value="perguruan_tinggi">Perguruan Tinggi</option>
+      <option value="tidak">Tidak ada</option>
+    </select>
+  </div>
+</div>
+
+<!-- Jenis Pekerjaan -->
+<div class="mb-3 align-items-center">
+  <label for="jenispekerjaan" class="col-form-label">Pekerjaan</label>
+  <div class="">
+    <select class="form-select" name="jenis_pekerjaan"id="jenispekerjaan" aria-label="Kerja" required>
+      <option value="" selected disabled hidden>Pilih Pekerjaan</option>
+      <option value="pns">PNS</option>
+      <option value="tni_polri">TNI/POLRI</option>
+      <option value="swasta">Swasta</option>
+      <option value="tidak_bekerja">Tidak Bekerja</option>
+      <option value="lain">Lain-lain</option>
+    </select>
+  </div>
+</div>
+
+<!-- Kewarganegaraan -->
+<div class="b-3 align-items-center">
+  <label for="negara" class="col-sm-2 col-form-label">Kewarganegaraan</label>
+  <div class="">
+    <select class="form-select" name="pilih_kewarganegaraan" id="negara" aria-label="Pilih kewarganegaraan" required>
+      <option value="" selected disabled hidden>Pilih Kewarganegaraan</option>
+      <option value="wni">WNI</option>
+      <option value="wna">WNA</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- tombol  -->
+<div class="container mt-4">
+  <div class="row gy-2">
+    <div class="col-12 col-md-6 text-md-start text-center">
+      <button type="button" class="btn btn-secondary fw-bold" onclick="kembali()">← Sebelumnya</button>
+    </div>
+    <div class="col-12 col-md-6 text-md-end text-center">
+    <!-- <button style="color: white;" type="button" class="btn btn-warning me-2 fw-bold" onclick="resetForm()">Reset</button>
+    <button type="button" class="btn btn-success me-2 fw-bold" onclick="updateForm()">Update</button> -->
+    <button  style="background-color: #007EA7; color: white;" type="submit" class="btn  fw-bold">Simpan & Lanjut</button>
+    </div>
+  </div>
+</div>
+
+</form>
+<!-- Penutup Bagian Kedua-->
+
+<!-- me-load toast -->
+<div id="toast-container"></div>
+
+<script>
+  fetch("komponen/toast.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("toast-container").innerHTML = html;
+
+      const script = document.createElement("script");
+      script.src = "js/form-autosave.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Gagal memuat komponen toast:", err));
+
+  fetch("komponen/divider.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("breadcrumb-container").innerHTML = html;
+
+      const current = window.location.pathname.split("/").pop().toLowerCase();
+      const items = document.querySelectorAll(".breadcrumb-item");
+
+      items.forEach(item => {
+        const page = item.getAttribute("data-halaman")?.toLowerCase();
+        if (page === current) {
+          item.classList.add("active");
+          item.setAttribute("aria-current", "page");
+          const link = item.querySelector("a");
+          if (link) {
+            link.removeAttribute("href");
+          }
+        }
+      });
+    })
+    .catch(err => console.error("Gagal memuat breadcrumb:", err));
+
+
+    // Tangani submit form identitas pasien
+const form = document.getElementById("formPasien");
+
+form.addEventListener("submit", async function (event) {
+  event.preventDefault(); 
+
+  // Ambil semua input dari form
+  const agama = document.getElementById("agama").value;
+  const pendidikan = document.getElementById("pendidikan").value;
+  const jenispekerjaan = document.getElementById("jenispekerjaan").value;
+  const kewarganegaraan = document.getElementById("negara").value;
+
+  
+
+  const sesi = await getSesiTerakhir(idpasien, idkunjungan);
+
+  // Buat payload sesuai API
+  const payload = {
+    waktutiba: null,
+    waktukaji: null,
+    
+    idpasien,
+    idkunjungan,
+    sesi: sesi + 1,
+
+    // Tambahan dari halaman ini
+    agama,
+    pendidikan,
+    jenis_pekerjaan: jenispekerjaan,
+    pilih_kewarganegaraan: kewarganegaraan
+  };
+
+  console.log("Payload yang akan dikirim:", payload);
+
+  try {
+    const response = await fetch("http://192.168.137.219/Aplikasita/Api/addidentitaspasien", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+    console.log("Response dari server:", data);
+
+    if (data.status === "success") {
+      alert(" Data berhasil disimpan!");
+      window.location.href = "riwayat_kesehatan.html"; 
+    } else {
+      alert("Gagal menyimpan data: " + (data.message || JSON.stringify(data)));
+    }
+  } catch (error) {
+    console.error("Error saat kirim data:", error);
+    alert("Terjadi kesalahan saat mengirim data ke server.");
+  }
+});
+
+// Fungsi ambil sesi terakhir dari API
+async function getSesiTerakhir(idpasien, idkunjungan) {
+  try {
+    const response = await fetch(
+      `http://192.168.137.219/Aplikasita/Api/checksesi?idpasien=${idpasien}&idkunjugan=${idkunjungan}`
+    );
+    const data = await response.json();
+    console.log("Cek sesi response:", data);
+
+    if (data.status === "success" && typeof data.sesi === "number") {
+      return data.sesi;
+    } else {
+      return 0; 
+    }
+  } catch (error) {
+    console.error("Gagal ambil sesi terakhir:", error);
+    return 0;
+  }
+}
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

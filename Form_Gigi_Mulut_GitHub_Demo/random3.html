@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSUD TARUTUNG</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="Picture/icon.png" type="image/png">
+  <script src="js/bootstrap.js"></script>
+  <script src="js/style.js"></script>
+  <script src="js/form-autosave.js"></script>
+  <style>
+    .is-invalid {
+      border-color: #dc3545;
+      background-color: #ffe8e8;
+    }
+  </style>
+</head>
+<body style="padding-top: 80px; background-color: #e9e9e9;">
+  <div id="breadcrumb-container"></div>
+  <nav style="background-color: #007EA7;" class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="rounded-circle" src="Picture/Logo-RSUD-Tarutung.png" alt="Logo" width="70" height="55">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold" href="#">RSUD TARUTUNG KAB. TAPANULI UTARA</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pencarian">
+          <button class="btn btn-light fw-bold" type="button">Cari</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <form id="formPasien" class="needs-validation" novalidate data-page="tanda_vital.html">
+    <div class="container">
+      <h5 class="fw-bold mt-5" style="color: #003459;">1. Tanda Vital</h5>
+    </div>
+
+    <!-- Form tetap sama, hanya validasi diperketat di bawah -->
+
+    <div class="container mt-4">
+      <div class="row gy-2">
+        <div class="col-12 col-md-6 text-md-start text-center">
+          <button type="button" class="btn btn-secondary fw-bold" onclick="kembali()">← Sebelumnya</button>
+        </div>
+        <div class="col-12 col-md-6 text-md-end text-center">
+          <button style="color: white;" type="button" class="btn btn-warning me-2 fw-bold" onclick="resetForm()">Reset</button>
+          <button type="button" class="btn btn-success me-2 fw-bold" onclick="updateForm()">Update</button>
+          <button style="background-color: #007EA7; color: white;" type="submit" class="btn fw-bold">Simpan & Lanjut</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="p-4 mt-4 mb-1"></div>
+
+  <script>
+    fetch("komponen/divider.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("breadcrumb-container").innerHTML = html;
+        const current = window.location.pathname.split("/").pop().toLowerCase();
+        const items = document.querySelectorAll(".breadcrumb-item");
+        items.forEach(item => {
+          const page = item.getAttribute("data-halaman")?.toLowerCase();
+          if (page === current) {
+            item.classList.add("active");
+            item.setAttribute("aria-current", "page");
+            const link = item.querySelector("a");
+            if (link) link.removeAttribute("href");
+          }
+        });
+      });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("formPasien");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let isValid = true;
+
+        const pernapasan = document.getElementById("pernapasan");
+        const nadi = document.getElementById("nadi");
+        const sistolik = document.getElementById("tekananDarahSistolik");
+        const diastolik = document.getElementById("tekananDarahDiastolik");
+        const suhu = document.getElementById("suhu");
+        const kesadaran = document.querySelector("select");
+
+        const fields = [pernapasan, nadi, sistolik, diastolik, suhu];
+        fields.forEach(field => {
+          if (!field.value.trim()) {
+            field.classList.add("is-invalid");
+            isValid = false;
+          } else {
+            field.classList.remove("is-invalid");
+            field.classList.add("is-valid");
+          }
+        });
+
+        if (kesadaran.selectedIndex === 0) {
+          kesadaran.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          kesadaran.classList.remove("is-invalid");
+          kesadaran.classList.add("is-valid");
+        }
+
+        const nyeriYa = document.getElementById("radioYaNyeri");
+        if (nyeriYa?.checked) {
+          document.querySelectorAll("#formGroupNyeri input").forEach(input => {
+            if (!input.value.trim()) {
+              input.classList.add("is-invalid");
+              isValid = false;
+            } else {
+              input.classList.remove("is-invalid");
+              input.classList.add("is-valid");
+            }
+          });
+        }
+
+        if (!isValid) {
+          showToast("Silakan lengkapi semua isian yang wajib diisi.");
+          return;
+        }
+
+        form.submit();
+      });
+    });
+
+    function showToast(message) {
+      alert(message); // ganti dengan custom toast jika tersedia
+    }
+  </script>
+</body>
+</html>
