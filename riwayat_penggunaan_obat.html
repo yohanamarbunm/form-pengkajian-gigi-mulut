@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSUD TARUTUNG</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/style.js"></script>
+    <script src="js/form-autosave.js"></script>
+    <link rel="icon" href="Picture/icon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<body style="padding-top: 80px; background-color: #e9e9e9;">
+
+  <div id="breadcrumb-container"></div>
+ <!-- Navbar Atas -->
+    <nav  style="background-color: #007EA7;" class="navbar navbar-expand-lg bg-body- fixed-top">
+        <div  class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="container1">
+                <a class="navbar-brand1" href="#">
+                  <img class="rounded-circle" src="Picture/Logo-RSUD-Tarutung.png" alt="Logo" width="70" height="55">
+                </a>
+              </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <h5 style=" font-weight: 700; text-shadow: 1px 1px 2px ; color: white;">RSUD TARUTUNG KAB. TAPANULI UTARA</h5>
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search"/>
+                <button  type="button" class="btn btn-light"><a style="font-weight: 700;">Cari</a></button>
+              </form>
+
+          </div>
+        </div>
+      </nav>
+
+     
+ <form id="formPasien" class="needs-validation" novalidate data-page="riwayat_penggunaan_obat.html">    
+<!-- Riwayat Penggunaan Obat -->
+
+      <div class="container mt-5">
+        <h5 class="fw-bold " style="color:#007EA7 ;">RIWAYAT PENGGUNAAN OBAT</h5>
+     </div>
+      <div class="container bg-light p-4 rounded shadow mt-4 " style="font-weight: 500;">
+
+  <div class="row mb-3 align-items-start mt-3 ">
+    <!-- <label class="col-sm-3 col-form-label d-flex align-items-center justify-content-end"> -->
+        <span style="margin-left: 20px; font-weight: 700;">Apakah Anda Pernah Menggunakan Obat?</span>
+    <!-- </label> -->
+    <div class="col-sm-12 mt-2">
+        <div class="form-check form-check-inline mb-2">
+            <input class="form-check-input" type="radio" name="riwayatObat" id="radioTidakObat" value="tidak" onchange="toggleObatTable()" checked>
+            <label class="form-check-label" for="radioTidakObat">Tidak Pernah</label>
+        </div>
+        <div class="form-check form-check-inline mb-2" style="margin-left: 0;">
+            <input class="form-check-input" type="radio" name="riwayatObat" id="radioAdaObat" value="ada" onchange="toggleObatTable()">
+            <label class="form-check-label" for="radioAdaObat">Pernah</label>
+        </div>
+        <div id="obatTableContainer" style="display: none;" class="mt-3">
+    <div class="table">
+        <table class="table table-bordered align-middle" id="obatTable" style="width: 100%; font-size: 0.85rem; white-space: normal;">
+            <thead class="table-light text-center">
+                <tr>
+                    <th style="width: 5%;">No</th>
+                    <th style="width: 20%;">Nama Obat</th>
+                    <th style="width: 15%;">Dosis</th>
+                    <th style="width: 20%;">Cara Pemberian</th>
+                    <th style="width: 15%;">Frekuensi</th>
+                    <th style="width: 20%;">Waktu & Tanggal</th>
+                    <th style="width: 5%;">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td><input type="text" class="form-control form-control-sm" name="nama_obat[]"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="dosis[]"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="cara_pemberian[]"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="frekuensi[]"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="waktu_tanggal[]"></td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="hapusBarisObat(this)" style="font-size: 0.75rem;">
+                            Hapus
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-sm mb-2" onclick="tambahBarisObat()" style="font-size: 0.8rem; background-color:#f4e3b2; box-shadow:  0 2px 5px rgba(0, 0, 0, 0.1);">
+       <span class="fw-bold" style="color: rgb(0, 0, 0);">
+          Tambah Baris
+       </span> 
+    </button>
+</div>
+    </div>
+</div>  
+</div>
+
+
+<!-- Tombol -->
+ <div class="container mt-4">
+  <div class="row gy-2">
+    <div class="col-12 col-md-6 text-md-start text-center">
+      <button type="button" class="btn btn-secondary fw-bold" onclick="kembali()">← Sebelumnya</button>
+    </div>
+    <div class="col-12 col-md-6 text-md-end text-center">
+    <!-- <button style="color: white;" type="button" class="btn btn-warning me-2 fw-bold" onclick="resetForm()">Reset</button>
+    <button type="button" class="btn btn-success me-2 fw-bold" onclick="updateForm()">Update</button> -->
+    <button  style="background-color: #007EA7; color: white;" type="submit" class="btn  fw-bold">Simpan & Lanjut</button>
+    </div>
+  </div>
+</div>
+
+</form>   
+      
+<div class="p-4  mt-4 mb-1"></div>
+
+  <!-- me-load toast -->
+<div id="toast-container"></div>
+
+<script>
+  // Toast untuk konfirmasi
+  fetch("komponen/toast.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("toast-container").innerHTML = html;
+
+      const script = document.createElement("script");
+      script.src = "js/form-autosave.js";
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Gagal memuat komponen toast:", err));
+
+
+    // Divider/Breadcumb
+  fetch("komponen/divider.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("breadcrumb-container").innerHTML = html;
+
+      const current = window.location.pathname.split("/").pop().toLowerCase();
+      const items = document.querySelectorAll(".breadcrumb-item");
+
+      items.forEach(item => {
+        const page = item.getAttribute("data-halaman")?.toLowerCase();
+        if (page === current) {
+          item.classList.add("active");
+          item.setAttribute("aria-current", "page");
+          const link = item.querySelector("a");
+          if (link) {
+            link.removeAttribute("href");
+          }
+        }
+      });
+    })
+    .catch(err => console.error("Gagal memuat breadcrumb:", err));
+
+
+    // Logic untuk submit dan tabel supaya muncul 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('formPasien');
+  if (!form) return;
+  const pageKey = form.dataset.page;
+  const saved = localStorage.getItem(pageKey);
+
+  if (saved) {
+    const data = JSON.parse(saved);
+
+    if (data["riwayatObat"] === "ada") {
+      document.getElementById("radioAdaObat").checked = true;
+    } else {
+      document.getElementById("radioTidakObat").checked = true;
+    }
+
+    toggleObatTable();
+
+    if (Array.isArray(data["nama_obat[]"])) {
+      const tableBody = document.querySelector("#obatTable tbody");
+      tableBody.innerHTML = "";
+
+      for (let i = 0; i < data["nama_obat[]"].length; i++) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td class="text-center">${i + 1}</td>
+          <td><input type="text" class="form-control form-control-sm" name="nama_obat[]" value="${data["nama_obat[]"][i] || ""}"></td>
+          <td><input type="text" class="form-control form-control-sm" name="dosis[]" value="${data["dosis[]"]?.[i] || ""}"></td>
+          <td><input type="text" class="form-control form-control-sm" name="cara_pemberian[]" value="${data["cara_pemberian[]"]?.[i] || ""}"></td>
+          <td><input type="text" class="form-control form-control-sm" name="frekuensi[]" value="${data["frekuensi[]"]?.[i] || ""}"></td>
+          <td><input type="text" class="form-control form-control-sm" name="waktu_tanggal[]" value="${data["waktu_tanggal[]"]?.[i] || ""}"></td>
+          <td class="text-center">
+            <button type="button" class="btn btn-danger btn-sm" onclick="hapusBarisObat(this)">Hapus</button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      }
+    }
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const data = {};
+    const inputs = form.querySelectorAll("input, select, textarea");
+
+    inputs.forEach((input) => {
+      const name = input.name;
+      if (!name) return;
+
+      if (name.endsWith("[]")) {
+        if (!data[name]) data[name] = [];
+        data[name].push(input.value);
+      } else if (input.type === "checkbox") {
+        if (!data[name]) data[name] = [];
+        if (input.checked) data[name].push(input.value);
+      } else if (input.type === "radio") {
+        if (input.checked) data[name] = input.value;
+      } else {
+        data[name] = input.value;
+      }
+    });
+
+    localStorage.setItem(pageKey, JSON.stringify(data));
+   
+  });
+});
+
+
+</script>
+
+    </body>
+</html>
