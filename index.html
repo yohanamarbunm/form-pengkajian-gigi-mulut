@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pengkajian Kesehatan Gigi dan Mulut | Demo</title>
+  <title>Pengkajian Kesehatan Gigi dan Mulut</title>
   <meta name="description" content="Demo frontend formulir pengkajian awal kesehatan gigi dan mulut rawat jalan.">
   <link rel="icon" href="Picture/icon.png" type="image/png">
   <link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/style.css">
@@ -15,17 +15,11 @@
   </style>
 </head>
 <body>
-  <nav class="topbar py-3"><div class="container d-flex align-items-center gap-3"><img class="brand-logo" src="Picture/Logo-RSUD-Tarutung.png" alt="Logo RSUD Tarutung"><div><div class="fw-bold">RSUD TARUTUNG</div><small class="opacity-75">Kabupaten Tapanuli Utara</small></div><span class="ms-auto badge text-bg-light">Mode Demo</span></div></nav>
+  <nav class="topbar py-3"><div class="container d-flex align-items-center gap-3"><img class="brand-logo" src="Picture/Logo-RSUD-Tarutung.png" alt="Logo RSUD Tarutung"><div><div class="fw-bold">RSUD TARUTUNG</div><small class="opacity-75">Kabupaten Tapanuli Utara</small></div></div></nav>
   <main class="container py-4 py-lg-5">
-    <section class="hero mb-4 mb-lg-5"><span class="pill">DEMO FRONTEND • GITHUB PAGES</span><h1 class="display-6 fw-bold mt-3">Pengkajian Awal<br>Kesehatan Gigi dan Mulut</h1><p class="lead opacity-75 mt-3 mb-4" style="max-width:700px">Formulir digital untuk simulasi pengkajian pasien rawat jalan. Isi setiap bagian secara berurutan; isian demo disimpan di browser yang sedang digunakan.</p><div class="d-flex flex-wrap gap-2"><a class="btn btn-light btn-lg fw-semibold" href="data_awal.html">Mulai pengkajian <span aria-hidden="true">→</span></a><a class="btn btn-outline-light btn-lg" href="Review.html">Lihat review formulir</a></div></section>
-    <div class="row g-3 mb-4">
-      <div class="col-md-4"><article class="section-card p-4"><div class="step-number mb-3">01</div><h2 class="h5 fw-bold">Isi data bertahap</h2><p class="muted mb-0">Lengkapi data awal, identitas, riwayat kesehatan, pemeriksaan, dan rencana tindak lanjut.</p></article></div>
-      <div class="col-md-4"><article class="section-card p-4"><div class="step-number mb-3">02</div><h2 class="h5 fw-bold">Simpan otomatis per halaman</h2><p class="muted mb-0">Data demo disimpan di localStorage agar dapat dibuka kembali pada browser dan perangkat yang sama.</p></article></div>
-      <div class="col-md-4"><article class="section-card p-4"><div class="step-number mb-3">03</div><h2 class="h5 fw-bold">Tinjau dan konfirmasi</h2><p class="muted mb-0">Buka halaman review untuk memeriksa rangkuman data yang sudah tersimpan sebelum menyelesaikan demo.</p></article></div>
-    </div>
-    <section class="section-card p-4 p-lg-5 mb-4"><div class="d-flex flex-wrap justify-content-between align-items-start gap-3"><div><h2 class="h4 fw-bold">Bagian pengkajian</h2><p class="muted">Pilih bagian untuk membuka halaman secara langsung.</p></div><button id="clearDemo" class="btn btn-outline-danger btn-sm">Hapus data demo di browser ini</button></div><div class="row g-2" id="sectionLinks"></div></section>
-    <div class="alert alert-warning border-0 rounded-4"><strong>Catatan privasi:</strong> Ini hanya demonstrasi frontend, bukan sistem rekam medis produksi. Jangan masukkan data pasien asli atau informasi kesehatan sensitif. Data tidak dikirim ke server dan tidak dibagikan kepada pengguna lain.</div>
-    <footer class="text-center small muted py-3">Proyek demo akademik • RSUD Tarutung • Tidak untuk keputusan klinis</footer>
+    <section class="hero mb-4 mb-lg-5"><h1 class="display-6 fw-bold mt-3">Pengkajian Awal<br>Kesehatan Gigi dan Mulut</h1><p class="lead opacity-75 mt-3 mb-4" style="max-width:700px"></p><div class="d-flex flex-wrap gap-2"><a class="btn btn-light btn-lg fw-semibold" href="data_awal.html">Mulai pengkajian <span aria-hidden="true">→</span></a><a class="btn btn-outline-light btn-lg" href="Review.html">Lihat review formulir</a></div></section>
+    <section class="section-card p-4 p-lg-5 mb-4"><div class="d-flex flex-wrap justify-content-between align-items-start gap-3"><div><h2 class="h4 fw-bold">Bagian pengkajian</h2><p class="muted">Pilih bagian untuk membuka halaman secara langsung.</p></div></div><div class="row g-2" id="sectionLinks"></div></section>
+    <footer class="text-center small muted py-3"> RSUD Tarutung • Tidak untuk keputusan klinis</footer>
   </main>
   <script>
     const sections=[['Data Awal','data_awal.html'],['Identitas Pasien','identitas_pasien.html'],['Riwayat Kesehatan','riwayat_kesehatan.html'],['Riwayat Alergi','riwayat_alergi.html'],['Riwayat Penggunaan Obat','riwayat_penggunaan_obat.html'],['Tanda Vital','tanda_vital.html'],['Aktivitas, Latihan & Istirahat','aktivitas.html'],['Nutrisi & Gizi','nutrisi_gizi.html'],['Pengkajian Fungsional','pengkajian_fungsional.html'],['Odontogram','odontogram.html'],['Perilaku / Koping','perilaku.html'],['Keamanan / Safety','keamanan.html'],['Kebutuhan Edukasi','kebutuhan_edukasi.html'],['Perencanaan Pulang','perencanaan_pulang.html'],['Masalah Keperawatan','masalah_keperawatan.html'],['Review & Verifikasi','Review.html'],['Tanda Tangan','tanda_tangan.html']];
